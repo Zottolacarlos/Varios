@@ -1,0 +1,50 @@
+_GIT CONFIG - list los comandos
+_ls - muestra archivos donde estoy parado
+_pwd - muestra la ruta donde estoy parado
+_cuando estoy escribiendo CD, con TAB autocompleto posibles directorios donde ir
+_mkdir - crear carpetas
+_ls - a - muestra carpetas ocultas
+_git init - genera las carpetas del git
+(proceso git) pclocal -> stage -> commit -> server (github)
+
+_code . - abre el IDE en la carpeta donde estoy
+_git status
+_git status -s
+_git add [archivo o expresiones regualares o . agrega todos los archivos de la carpeta] 
+_git add archivo1.txt archivo2.txt (separado por espacio)
+_git restore --staged [archivo] - recuperar el archivo con el cambio anterior
+_git commit -m "msje q tenga sentido"[archivo]
+_git commit "vacio" me abre el editor para que agrege el texto a mano, luego debo cerrarlo
+_git commit --amend - agrega más info a mi ultimo commit en un solo paso
+_git commit -am - hace el git add
+_rm [archivo] - eliminar archivo
+_git rm [archivo] - borra el archivo y hace el add
+_md [a1] [a2] - mueve o renombra archivos
+_git mv [a1] [a2] - lo mismo pero ya hace el add
+
+VARIABLES DE CONFIGURACION (LOCAL)
+_.gitignore - dentro de este archivo puedo poner rutas o archivos que git debe ignorar y no subir al repositorio
+_git diff - los cambios q se están por agregar
+_git log - historial cambios (sale con Q)
+_git log --online - historial reducido
+_git branch - verificar la rama en la q nos encontramos
+_grit checkout -b [nombre rama] - crea una rama nueva (el -b es para crear, sino es para cambiar de branch)
+_cat [archivo] - muestra el contenido del archivo
+_git merge [nombre rama]  (en la rama donde quiero llevar las cosas)
+_git rebase - opcion a merge para commitear en otra rama sin dejar rastro grafico de un merge
+_git remote add origin https://github.com/Crazychars/git.git - indica servidor remoto
+_git push -u origin master - para subir nuestros cambios
+_git pull [remoto] [archivo] - baja el archivo de github y hace un merge con lo LOCAL
+_fetch [remoto] [archivo] - lo mismo que pull PERO SIN EL MERGE
+_git branch -r - me muestra cual es nuestra RAMA remota
+_git clone [url del proyecto en github] - copia un proyecto de github 
+_git log --oneline --graph --all
+_git stash - guarda de forma temporal los ultimos cambios añadidos, luego los mergeo en otra rama con: 
+_git stash pop - manda los cambios temporales a otra rama
+_git checkout [hash de ese commit] - me voy a un commit especifico para ver el estado de la app en ese estado
+_git revert HEAD - deshacer un commit, otra forma es:
+_git reset --hard [hash de ese commit] - un revert mas fuerte borra todo los commits posteriores
+_git reflog - muestra todo sobre el log
+
+
+https://www.youtube.com/watch?v=0Kzi-9TKxfM
