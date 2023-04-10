@@ -420,7 +420,5 @@ botones_guardados[13].config(command=borrar)
 botones_guardados[12].config(command=resultado)
 
 
-
-
 # evitar q se cierre la app
 app.mainloop()
