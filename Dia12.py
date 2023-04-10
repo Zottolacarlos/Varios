@@ -1,4 +1,7 @@
 from tkinter import *
+import random
+import datetime
+from tkinter import filedialog, messagebox
 
 operador = ''
 
@@ -90,6 +93,82 @@ def total():
     var_subtotal.set(f'$ {round(subtotal, 2)}')
     var_impuestos.set(f'$ {round(impuestos, 2)}')
     var_total.set(f'$ {round(total, 2)}')
+
+def recibo():
+    texto_recibo.delete(1.0, END)
+    numero_recibo = f'N# - {random.randint(1000, 9999)}'
+    fecha = datetime.datetime.now()
+    fecha_recibo = f'{fecha.day}/{fecha.month}/{fecha.year} - {fecha.hour}:{fecha.minute}'
+    texto_recibo.insert(END, f'Datos:\t{numero_recibo}\t\t{fecha_recibo}')
+    texto_recibo.insert(END, f'*'*69 + '\n')
+    texto_recibo.insert(END, 'items\t\tCant.\tCosto Items\n')
+    texto_recibo.insert(END, f'*' * 63 + '\n')
+    #buscar las comidas elegidas
+    x = 0
+    for comida in texto_comida:
+        if comida.get() != '0':
+            texto_recibo.insert(END, f'{lista_comidas[x]}\t\t{comida.get()}\t'
+                                     f'$ {int(comida.get())* precios_comida[x]}\n')
+        x += 1
+    x = 0
+    for bebida in texto_bebida:
+        if bebida.get() != '0':
+            texto_recibo.insert(END, f'{lista_bebidas[x]}\t\t{bebida.get()}\t'
+                                     f'$ {int(bebida.get())* precios_bebida[x]}\n')
+        x += 1
+    x = 0
+    for postre in texto_postre:
+        if postre.get() != '0':
+            texto_recibo.insert(END, f'{lista_postres[x]}\t\t{postre.get()}\t'
+                                     f'$ {int(postre.get())* precios_postre[x]}\n')
+        x += 1
+    texto_recibo.insert(END, f'*' * 63 + '\n')
+    texto_recibo.insert(END, f'Costo de la comida: \t\t\t {texto_costo_comida.get()}\n')
+    texto_recibo.insert(END, f'Costo de la bebida: \t\t\t {texto_costo_bebida.get()}\n')
+    texto_recibo.insert(END, f'Costo de la postre: \t\t\t {texto_costo_postre.get()}\n')
+    texto_recibo.insert(END, f'*' * 63 + '\n')
+    texto_recibo.insert(END, f'Subtotal de la comida: \t\t\t {var_subtotal.get()}\n')
+    texto_recibo.insert(END, f'Impuesto de la bebida: \t\t\t {var_impuestos.get()}\n')
+    texto_recibo.insert(END, f'Total de la postre: \t\t\t {var_total.get()}\n')
+    texto_recibo.insert(END, f'-' * 69 + '\n')
+    texto_recibo.insert(END, 'Lo esperamos nuevamente')
+
+def guardar():
+    info_recibo = texto_recibo.get(1.0, END)
+    archivo = filedialog.asksaveasfile(mode='w', defaultextension='.txt')
+    archivo.write(info_recibo)
+    archivo.close()
+    messagebox.showinfo('INFORMACION', "Su recibo ha sido guardado")
+
+def resetear():
+    texto_recibo.delete(0.1,END)
+    for texto in texto_comida:
+        texto.set('0')
+    for texto in texto_bebida:
+        texto.set('0')
+    for texto in texto_postre:
+        texto.set('0')
+
+    for cuadro in cuadros_comida:
+        cuadro.config(state=DISABLED)
+    for cuadro in cuadros_bebida:
+        cuadro.config(state=DISABLED)
+    for cuadro in cuadros_postre:
+        cuadro.config(state=DISABLED)
+
+    for v in variables_comida:
+        v.set(0)
+    for v in variables_bebida:
+        v.set(0)
+    for v in variables_postre:
+        v.set(0)
+
+    var_costo_comida.set('')
+    var_costo_bebida.set('')
+    var_costo_postre.set('')
+    var_subtotal.set('')
+    var_impuestos.set('')
+    var_total.set('')
 
 # aplicacion
 app = Tk()
@@ -361,7 +440,9 @@ for boton in botones:
     columnas += 1
 
 botones_creados[0].config(command=total)
-
+botones_creados[1].config(command=recibo)
+botones_creados[2].config(command=guardar)
+botones_creados[3].config(command=resetear)
 # area de recibo
 texto_recibo = Text(panel_recibo,
                     font= ('Dosis', 12, 'bold'),
