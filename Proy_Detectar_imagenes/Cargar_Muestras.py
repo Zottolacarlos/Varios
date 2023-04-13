@@ -73,22 +73,22 @@ import numpy as np
 
 
 #Mostrar algunas imagenes con pyplot
-"""import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 plt.figure(figsize=(15,15))
 
 carpeta = 'cuchillos/cuchillos'
 imagenes = os.listdir(carpeta)
-print(carpeta)
+# print(carpeta)
 for i, nombreimg in enumerate(imagenes[:25]):
-  print(nombreimg)
+  # print(nombreimg)
   plt.subplot(5,5,i+1)
   imagen = mpimg.imread(carpeta + '/' + nombreimg)
 
   plt.imshow(imagen)
   plt.pause(0.5)
-  plt.draw()"""
+  plt.draw()
 
 """try:
     os.mkdir('dataset')
