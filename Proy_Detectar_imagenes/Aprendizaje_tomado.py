@@ -108,10 +108,10 @@ url = 'https://media.wonderfulhomeshop.com/c/product/cuchara-cafe-alida-comas-52
 prediccion = categorizar(url)
 print(prediccion)
 
-"""#Crear la carpeta para exportarla a TF Serving
+#Crear la carpeta para exportarla a TF Serving
 !mkdir -p carpeta_salida/modelo_cocina/1
 
 #Guardar el modelo en formato SavedModel
 modelo.save('carpeta_salida/modelo_cocina/1')
 
-!zip -r modelo_cocina.zip /content/carpeta_salida/modelo_cocina/"""
+!zip -r modelo_cocina.zip /content/carpeta_salida/modelo_cocina/
