@@ -1,0 +1,32 @@
+MATH
+CMATH - OPERACIONES CON COMPLEJOS
+pytest - Automation test
+Celery - Task Queue (tareas programadas)
+OS	- Operaciones con el sistema operativo
+OpenCV - manejo de camaras web
+Pillow - procesamiento de imagenes
+PyMob - apps para android
+urllib - para trabajar con url y http
+requests - lib avanzada para trabajar con http
+re	- para trabajar con expresiones regulares
+Random	- Para trabajar con Randoms things
+nmap	- trabajr con la red y sus dispositivos
+string	- para trabajar con cadenas
+copy - funciones para copiar objetos
+seaborn - lib basada en mathplotlib de alto nivel
+warnings - para manejar advertencias durante la ejecucion del programa
+Pendulum - para datetime de una manera mas facil?
+ftfy - Have you encountered when the foreign language present in the 	data 	does not appear correctly? This is called Mojibake 	example: 	print	(ftfy.fix_text('Correct the sentence 	using â€œftfyâ€\x9d.'))
+Sketch - The sketch is a unique AI code-writing assistant specifically 	 	designed for users who work with the pandas
+pgeocode - has been incredibly useful for my spatial analysis projects
+rembg - removes the background from the images easily
+Humanize - easytoread string formatting for numbers, dates, and times.
+AKShare - is a financial data interface library based on Python, whose 	goal 	is to implement a set of tools for basic data, real-	time and historical market data
+streamlit - is a Python framework that can quickly turn data into 	visual 	and interactive pages. It allows us to turn our data 	into charts in 	minutes. import stremalit as st
+	x = st.slider('Select a value')
+	st.write(x, 'squared is', x * x)
+wagtail - is a powerful open-source Django CMS (content management 	system). Firstly, the project is actively updated and iterated, 	and secondly, all the features mentioned on the project 	homepage are free, without any paid unlocking tricks. It 	focuses on content management without constraining front-end 	implementation.
+django-blog-tutorial - This is a Django tutorial that takes us step by 	step through the development of a personal blog system using 	Django from scratch, while mastering Django development skills 	in practice.
+dash -  is a web framework specifically designed for machine learning, 	allowing users to quickly build machine learning apps through 	the framework.
+Mitosheet - para crear tablas de excel
+

@@ -1,0 +1,27 @@
+1_np.array: Crea un array NumPy a partir de una lista o secuencia.
+2_np.zeros: Crea un array lleno de ceros.
+3_np.ones: Crea un array lleno de unos.
+4_np.empty: Crea un array sin inicializar con valores aleatorios.
+5_np.arange: Crea un array con valores espaciados uniformemente dentro de un intervalo.
+6_np.linspace: Crea un array con valores espaciados uniformemente entre un intervalo.
+7_np.reshape: Cambia la forma de un array sin cambiar sus datos.
+8_np.transpose: Transpone un array (intercambia filas y columnas).
+9_np.concatenate: Combina múltiples arrays a lo largo de un eje dado.
+10_np.split: Divide un array en múltiples subarrays a lo largo de un eje dado.
+11_np.max: Encuentra el valor máximo en un array.
+12_np.min: Encuentra el valor mínimo en un array.
+13_np.mean: Calcula el valor medio de un array.
+14_np.sum: Calcula la suma de los elementos de un array.
+15_np.std: Calcula la desviación estándar de un array.
+16_np.var: Calcula la varianza de un array.
+17_np.argsort: Devuelve los índices que ordenarían un array de forma ascendente.
+18_np.clip: Limita los valores de un array dentro de un rango específico.
+19_np.dot: Realiza una multiplicación de matrices.
+20_np.exp: Calcula la exponencial de cada elemento de un array.
+21_np.log: Calcula el logaritmo natural de cada elemento de un array.
+22_np.sin: Calcula el seno de cada elemento de un array.
+23_np.cos: Calcula el coseno de cada elemento de un array.
+24_np.random.rand: Genera números aleatorios en un array de forma uniforme.(es config)
+25_np.where: Devuelve los índices de los elementos que cumplen una determinada condición.
+26_np.identity: Genera una matriz con la diagonal 1
+27_np.sort(): ordena un array y da como resultado el array ordenado, sile pasas un array como dato, sino como medoto de array te ordena el array
